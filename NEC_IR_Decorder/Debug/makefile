@@ -61,8 +61,8 @@ all: main-build
 main-build: NEC_IR_Decorder.elf secondary-outputs
 
 # Tool invocations
-NEC_IR_Decorder.elf: $(OBJS) $(USER_OBJS) C:\git\NEC-IR-Decorder\NEC_IR_Decorder\STM32G031K8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "NEC_IR_Decorder.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\git\NEC-IR-Decorder\NEC_IR_Decorder\STM32G031K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NEC_IR_Decorder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+NEC_IR_Decorder.elf: $(OBJS) $(USER_OBJS) C:\GIT\NEC-IR-Decorder\NEC_IR_Decorder\STM32G031K8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "NEC_IR_Decorder.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\GIT\NEC-IR-Decorder\NEC_IR_Decorder\STM32G031K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NEC_IR_Decorder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
